@@ -3,7 +3,7 @@ function X = Poisson (r,lambda)
   for k=1:r
     u=UMersenneTwisterRNG(1:1);
     i=0;
-    p=e^(-lambda);
+    p=exp(-lambda);
     S=p;
     while (u>S)
       i=i+1;

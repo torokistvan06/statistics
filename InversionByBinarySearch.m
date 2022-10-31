@@ -40,7 +40,7 @@ for j = 1:column_count
 end
 
 total_probability = sum(X(2,:));
-if (total_probability > 1.0001)
+if (total_probability > 1)
     error('Wrong input discrete random variable!');
 end
 

@@ -2,11 +2,12 @@ function X = Newton_Raphson(distribution_type, parameters, epsilon, n, a, b, x_m
   X=zeros(1,n);
   f=@(x)gampdf(x,parameters(1),parameters(2));
   F=@(x)gamcdf(x,parameters(1),parameters(2));
-  %f=@(x)ContinuousPDF(x,distribution_type,parameters);
-  %F=@(x)ContinuousCDF(x,distribution_type,parameters);
+  f=@(x)ContinuousPDF(x,distribution_type,parameters);
+  F=@(x)ContinuousCDF(x,distribution_type,parameters);
   kezdet=F(a);
   veg=F(b);
   for i=1:n
+    disp(i)
     u=UMersenneTwisterRNG(1:1)*(veg-kezdet)+kezdet;
     x=x_min;
     y=0;

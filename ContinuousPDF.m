@@ -166,7 +166,7 @@ switch (distribution_type)
 
         end
   case 'lab3'
-      f = zeros(n);
+      f = zeros(1,n);
       for i=1:n
         if (x(i) < -2 || x(i) > 3)
           f(i) = 0;

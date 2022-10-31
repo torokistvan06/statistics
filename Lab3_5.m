@@ -13,7 +13,11 @@ function Lab3_5 (n)
     hgy = 0;
     j = 1;
     while (j <= 20)
-      X = [1 2 3 4; paradicsom/ossz uborka/ossz paprika/ossz hagyma/ossz];
+      px = paradicsom/ossz;
+      ux = uborka/ossz;
+      prx = paprika/ossz;
+      hx = 1 - (px + ux + prx);
+      X = [1 2 3 4; px ux prx hx];
       x = InversionByBinarySearch(X, 1, 1);
       ossz = ossz - 1;
       switch(x)
@@ -47,7 +51,11 @@ function Lab3_5 (n)
     hgy = 0;
     j = 1;
     while (j < 50)
-      X = [1 2 3 4; paradicsom/ossz uborka/ossz paprika/ossz hagyma/ossz];
+      px = paradicsom/ossz;
+      ux = uborka/ossz;
+      prx = paprika/ossz;
+      hx = 1 - (px + ux + prx);
+      X = [1 2 3 4; px ux prx hx];
       x = InversionByBinarySearch(X, 1, 1);
       ossz = ossz - 1;
       switch(x)
