@@ -40,6 +40,7 @@ switch (distribution_type)
   case 'beta'
         a = parameters(1);
         b = parameters(2);
+        f = zeros(1,n);
         if (a <= 0 || b <=0 )
             error('Wrong parameter');
         end
@@ -174,5 +175,23 @@ switch (distribution_type)
           f(i) = 8/45 * (x(i)/4 + 1);
         end
       end
+  case 'L6_3_Y'
+        f = zeros(1,n);
+        for i=1:n
+          if( x(i)<-1/2 || x(i)>1 )
+              f(i)=0;
+          else
+              f(i)=(4 * x(i)^2 + 5) / 9;
+          end
+        end   
+   case 'L6_3_X'
+        f = zeros(1,n);
+        for i=1:n
+          if( x(i)<0 || x(i)>1 )
+              f(i) = 0;
+          else
+              f(i) = (2 * x(i)^3 + x(i) + 2) / 3;
+          end
+        end
 end
 end

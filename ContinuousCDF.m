@@ -61,6 +61,10 @@ function F = ContinuousCDF(x, distribution_type, parameters)
     case 'pearson'
       x_min = -inf;
     case 'lab3'
+      x_min = -inf;  
+    case 'L6_3_Y'
+      x_min = -inf;
+   case 'L6_3_X'
       x_min = -inf;
   end
   F=zeros(1,n);

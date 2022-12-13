@@ -2,6 +2,12 @@ function X = ExactInversion (distribution_type, parameters,n)
   U=ULEcuyerRNG(1,n);
   X = zeros(1, n);
   switch(distribution_type)
+    case 'lab8'
+      theta = parameters(1);
+      
+      for i=1:n
+        X(i) = (-1 + sqrt(1-U(i)))/(-2*theta);
+      end
     case 'exponencialis'
       lambda = parameters(1);
       if(lambda<=0)

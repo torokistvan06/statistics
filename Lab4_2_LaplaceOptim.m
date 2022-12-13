@@ -1,16 +1,13 @@
-function X = Lab4_2_LaplaceOptim(n,s,nu)
+function X = Lab4_2_LaplaceOptim (n,s,nu)
     X=zeros(1,n);
-    a=sqrt(e)/2;
     for i=1:n
       while true
-        U=ULEcuyerRNG(1:1);
-        V=ULEcuyerRNG(1:1);
-        Y=tan(pi*V);
-        S=Y*Y;
-        if (U<=a*(1+S)*e^(-S/2))
+        Y=ExactInversion('exponencialis',1,1);
+        V=URealRNG(1,4,-1,1,1);
+        if ((Y-1)^2 <= -2*log(abs(V)))
           break;
         end
-      end
-    X(i)=Y* s + nu;
-    end
+     end
+    X(i)=Y*sign(V)* s + nu;
+   end
 end

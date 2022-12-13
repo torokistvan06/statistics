@@ -3,7 +3,7 @@ function Lab4_3_Test
   lambda = 3/4;
   y = 3/(3 - lambda);
   x = 0 : 0.01 : 10;
-  n = length(x);
+  n = 10000;
 
   f = @(x) alfa .* (x.^3) .*exp(-3 .* x);
   g = @(x) lambda .* exp(-lambda .* x);

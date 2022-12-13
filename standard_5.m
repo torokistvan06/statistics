@@ -1,8 +1,8 @@
-function X = Lab4_2_Cauchy(n,s,nu)
+function X = standard_5 (n,s,nu)
     X=zeros(1,n);
     a=sqrt(exp(1))/2;
     for i=1:n
-      while true
+      while true 
         U=ULEcuyerRNG(1:1);
         V=ULEcuyerRNG(1:1);
         Y=tan(pi*V);

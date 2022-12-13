@@ -12,7 +12,7 @@ function ContinuousTest(distribution_type)
     switch (distribution_type)
     case 'gamma'
         x = (1/100:0.1:35);
-        parameters = [11/3, 4];
+        parameters = [6, -2];
         f = ContinuousPDF(x,distribution_type,parameters);
         subplot(1,2,1);
         plot(x,f,'k');
