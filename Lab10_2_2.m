@@ -17,10 +17,10 @@ function Lab10_2_2
     fprintf("t_value = %d\n", t_value);
     fprintf("p_value = %d\n", p_value);
     
-    if(H == 1)
-       fprintf('Az elso gep kevesebbet tolt a zacskokba! | H == %d\n', H);
+    if (H == 1)
+        fprintf("2.) A második adagológép átlagosan kevesebb csicseriborsót adagol, mint az elsõ. | H == %d\n", H);
     else
-       fprintf('Az elso gep atlagban nem tolt kevesebbet a zacskokba, mint a masodik! | H == %d\n', H);
+        fprintf("2.) A második adagológép átlagosan több csicseriborsót adagol, mint az elsõ. | H == %d\n", H);
     end
 end
 
