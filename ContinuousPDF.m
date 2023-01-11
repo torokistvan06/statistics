@@ -79,7 +79,7 @@ switch (distribution_type)
           resz = (1 + (x(i)^2)/N)^(-((N+1)/2));
           f(i) = (G1/(gyok*G2))*resz;
         end
-   case 'exponencialis'
+   case ' nencialis'
         l = parameters(1);
         if (l <= 0)
             error('Wrong parameter');

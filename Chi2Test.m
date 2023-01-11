@@ -62,7 +62,7 @@ switch (tail)
         ci_chi2(1) = 0;
         ci_chi2(2) = chi2inv(1 - alpha, n - 1);
         
-        ci_std(1) = sqrt(sqrt(n - 1) * sigma_2_ / ci_chi2(2));
+        ci_std(1) = sqrt((n - 1) * sigma_2_ / ci_chi2(2));
         ci_std(2) = inf;
             
         probability = chi2cdf(chi2_value, n - 1);
@@ -73,7 +73,7 @@ switch (tail)
         ci_chi2(2) = inf;
         
         ci_std(1) = 0;
-        ci_std(2) = sqrt(sqrt(n - 1) * sigma_2_ / ci_chi2(1));
+        ci_std(2) = sqrt((n - 1) * sigma_2_ / ci_chi2(1));
         
         probability = chi2cdf(chi2_value, n - 1);
         p_value = probability;

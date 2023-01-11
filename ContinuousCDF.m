@@ -49,7 +49,7 @@ function F = ContinuousCDF(x, distribution_type, parameters)
     case 'student'
       x_min=-inf;
     case 'exponencialis'
-      x_min=-inf;
+      x_min=0;
     case 'sajat'
       x_min=-inf;
     case 'gamma'
