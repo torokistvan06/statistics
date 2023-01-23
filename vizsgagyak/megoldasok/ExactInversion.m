@@ -67,12 +67,11 @@ function X = ExactInversion (distribution_type, parameters,n)
   case 'vizsga2022'
       for i=1:n
         if (U(i) >= 1/2)
-            X(i) = sqrt((log(1-U(i)) - 2)/ 8);
+           X(i) = sqrt((-log(1-U(i)) - 2)/ 8);
         else 
            X(i) = 0; 
         end
       end
-  end
   end
 end
 
